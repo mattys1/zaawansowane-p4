@@ -1,0 +1,44 @@
+\doxysection{Merge\+Sorter\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classMergeSorter}{}\label{classMergeSorter}\index{MergeSorter$<$ T $>$@{MergeSorter$<$ T $>$}}
+
+
+The class inside this template is responsible for sorting vectors using the merge sort algorithm.  
+
+
+
+
+{\ttfamily \#include $<$Merge\+Sorter.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMergeSorter_a2bd82e420e7cd567bdc96e1f21089f20}{operator()}} (std\+::vector$<$ T $>$ \&to\+Sort)
+\begin{DoxyCompactList}\small\item\em Will sort any vector inserted into the function using the merge sort algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Merge\+Sorter$<$ T $>$}
+The class inside this template is responsible for sorting vectors using the merge sort algorithm. 
+
+The sorting functionality can be accessed with {\ttfamily \doxylink{classMergeSorter_a2bd82e420e7cd567bdc96e1f21089f20}{operator()()}} 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMergeSorter_a2bd82e420e7cd567bdc96e1f21089f20}\index{MergeSorter$<$ T $>$@{MergeSorter$<$ T $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!MergeSorter$<$ T $>$@{MergeSorter$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily \label{classMergeSorter_a2bd82e420e7cd567bdc96e1f21089f20} 
+template$<$typename T $>$ \\
+void \mbox{\hyperlink{classMergeSorter}{Merge\+Sorter}}$<$ T $>$\+::operator() (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ \&}]{to\+Sort}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Will sort any vector inserted into the function using the merge sort algorithm. 
+
+This operation happens recursively and IS NOT in place
+
+
+\begin{DoxyParams}{Parameters}
+{\em to\+Sort} & The vector that is to be sorted \\
+\hline
+\end{DoxyParams}

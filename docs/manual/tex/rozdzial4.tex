@@ -1,0 +1,99 @@
+	\newpage
+\section{Implementacja}		%4
+%Opisać implementacje algorytmu/programu. Pokazać ciekawe fragmenty kodu
+%Opisać powstałe wyniki (algorytmu/nrzędzia)
+
+\subsection{Klasa MergeSorter} \label{sec:MergeSorter}
+
+Klasa jest zaimplementowana jako jeden plik \texttt{.hpp}. Nie jest podzielona na plik implementacji oraz nagłówek, ponieważ jest ona szablonem. Deklaracja klasy oraz prywatne elementy wyglądają tak jak na listingu nr.~\ref{lst:mergesorter}.
+
+\begin{lstlisting}[caption=Klasa \texttt{MergeSorter}, label={lst:mergesorter}, language=C++]
+template<typename T>
+class MergeSorter {
+private: 
+	std::vector<T> mergeSort(const std::vector<T>& toMerge) {
+		if(toMerge.size() <= 1) {
+			return toMerge;
+		}
+
+		auto left = toMerge | std::views::take(toMerge.size() / 2) | std::ranges::to<std::vector>();
+		auto right = toMerge | std::views::drop(toMerge.size() / 2) | std::ranges::to<std::vector>();
+
+		auto sortedLeft = mergeSort(left);
+		auto sortedRight = mergeSort(right);
+
+		return merge(sortedLeft, sortedRight);
+	}
+
+	std::vector<T> merge(const std::vector<T>& left, const std::vector<T>& right) {
+		std::vector<T> merged;
+		auto leftIt { left.begin() }, rightIt { right.begin() };
+
+		for (; leftIt != left.end() && rightIt != right.end();) {
+			if(*leftIt <= *rightIt) {
+				merged.push_back(*leftIt);
+				leftIt++;
+			} else {
+				merged.push_back(*rightIt);
+				rightIt++;
+			}
+		}
+
+		merged.insert(merged.end(), leftIt, left.end());
+		merged.insert(merged.end(), rightIt, right.end());
+		
+		return merged;
+	}
+
+public:
+	void operator()(std::vector<T>& toSort) {
+		if(toSort.size() <= 1) {
+			return;
+		}
+
+		toSort = mergeSort(toSort);	
+	}
+};
+\end{lstlisting}
+  
+Klasa posiada tylko jedną publiczną metodę, którą jest \texttt{operator()(std::vector<T>\& toSort)}. Parametr \texttt{toSort} jest wektorem, który ma być posortowany przez metodę. Jak widać na linijce nr. 40, żadne działanie nie jest wykonywane na wektorze, jeżeli ma jeden element albo jest pusty, ponieważ wtedy nie ma czego sortować. Inaczej do wektora przypisywany jest wynik prywatnej metody \texttt{mergeSort()}, zdefiniowanej na linijce nr. 4.
+
+Warunkiem bazowym metody jest sprawdzenie czy parametr \texttt{toMerge} ma długość mniejszą lub równą jeden - wtedy jest zwracany. Na linijce nr. 9 i 10 deklarowane są zmienne \texttt{left} i \texttt{right} będące respektywną połową \texttt{toMerge}. Na linijkach nr. 12 i 13 do zmiennych \texttt{sortedRight} i \texttt{sortedLeft} przypisywane są rekurencyjnie wyniki metody \texttt{toSort()}. Wiemy że wyniki te będą posortowane, ponieważ albo zostanie zwrocona tablica pusta lub jedno-elementowa, albo program przejdzie dalej i wykona metodę \texttt{merge()}, zadeklarowaną na linijce nr. 18, na podanych zmiennych i zwróci jej wynik.
+
+Metoda \texttt{merge()} ma na celu scalanie podtablic we większą, posortowaną tablicę. Tworzy ona ku temu celu wektor \texttt{merged} do zwrócenia oraz dwa iteratory \texttt{leftIt} i \texttt{rightIt}, wskazujące na początek wektorów danej połówki. W pętli na linijce nr. 22 sprawdzane są po kolei elementy z danych połówek. Mniejszy zawsze zostaje dodany do \texttt{merged} i nie sprawdza się już go, poprzez inkrementację danego iteratora.
+
+
+\subsection{Testy}
+
+Typowy test wygląda jak na listingu nr.~\ref{lst:test_example}
+
+\begin{lstlisting}[caption=Test frameworka Google Test, label={lst:test_example}, language=C++]
+TEST(ImportantTests, SortNormal) {
+  MergeSorter<int> sorter;
+  std::vector test{5, 2, 4, 3, 1};
+  sorter(test);
+
+  EXPECT_EQ(test, (std::vector{1, 2, 3, 4, 5}));
+}
+
+\end{lstlisting}
+
+Na linijce nr. 1 test deklarowany jest makrem \texttt{TEST()}. Pierwszy jego parametr to nazwa grupy testów, a drugi to nazwa samego testu. Blok testowy działa tak jak zwykły kod. Jednak, można w nim umieszczać wyrażenia mające testować dane warunki. Użyte w tym przypadku \texttt{EXPECT\_EQ()} ma na celu przetestować równość dwóch wyrażeń. Zadeklarowany na linijce nr. 3 wektor \texttt{test} jest sortowany przez zadeklarowany linijkę wcześniej \texttt{sorter}. Jego posortowana wartość powinna wynosić ciąg \texttt{(1,2,3,4,5)}. Włączając program, widać z listingu nr.~\ref{lst:test_positive} że tak jest.
+
+\begin{lstlisting}[caption=Poprawny wynik testu, label={lst:test_positive}, language=C++]
+[ RUN      ] ImportantTests.SortNormal
+[       OK ] ImportantTests.SortNormal (0 ms)
+\end{lstlisting}
+
+Modyfikując ciąg, z którym ma być porównywany \texttt{test}, można też uzyskać niepoprawny wynik jak na listingu nr.~\ref{lst:test_negative}. Można zauważyć, że program powiadamia użytkownika w jaki sposób test nie został zaliczony.
+
+\begin{lstlisting}[caption=Niepoprawny wynik testu, label={lst:test_negative}, language=C++]
+[ RUN      ] ImportantTests.SortNormal
+/home/mattys/skrypty-i-syfy/studia/rok2/programowanie-zaawansowane/p3/tests/tests.cpp:11: Failure
+Expected equality of these values:
+  test
+    Which is: { 1, 2, 3, 4, 5 }
+  (std::vector{1, 2, 3, 5, 5})
+    Which is: { 1, 2, 3, 5, 5 }
+[  FAILED  ] ImportantTests.SortNormal (0 ms)
+\end{lstlisting}
