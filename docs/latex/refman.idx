@@ -1,8 +1,40 @@
-\indexentry{MergeSorter$<$ T $>$@{MergeSorter$<$ T $>$}|hyperpage}{5}
-\indexentry{MergeSorter$<$ T $>$@{MergeSorter$<$ T $>$}!operator()@{operator()}|hyperpage}{5}
-\indexentry{operator()@{operator()}!MergeSorter$<$ T $>$@{MergeSorter$<$ T $>$}|hyperpage}{5}
-\indexentry{src/main.cpp@{src/main.cpp}|hyperpage}{7}
-\indexentry{main.cpp@{main.cpp}!main@{main}|hyperpage}{7}
-\indexentry{main@{main}!main.cpp@{main.cpp}|hyperpage}{7}
-\indexentry{src/MergeSorter.hpp@{src/MergeSorter.hpp}|hyperpage}{7}
-\indexentry{src/MergeSorter.hpp@{src/MergeSorter.hpp}|hyperpage}{8}
+\indexentry{Matrix$<$ T $>$@{Matrix$<$ T $>$}|hyperpage}{5}
+\indexentry{Matrix$<$ T $>$@{Matrix$<$ T $>$}!Matrix@{Matrix}|hyperpage}{6}
+\indexentry{Matrix@{Matrix}!Matrix$<$ T $>$@{Matrix$<$ T $>$}|hyperpage}{6}
+\indexentry{Matrix$<$ T $>$@{Matrix$<$ T $>$}!Matrix@{Matrix}|hyperpage}{6}
+\indexentry{Matrix@{Matrix}!Matrix$<$ T $>$@{Matrix$<$ T $>$}|hyperpage}{6}
+\indexentry{Matrix$<$ T $>$@{Matrix$<$ T $>$}!Matrix@{Matrix}|hyperpage}{6}
+\indexentry{Matrix@{Matrix}!Matrix$<$ T $>$@{Matrix$<$ T $>$}|hyperpage}{6}
+\indexentry{Matrix$<$ T $>$@{Matrix$<$ T $>$}!Matrix@{Matrix}|hyperpage}{7}
+\indexentry{Matrix@{Matrix}!Matrix$<$ T $>$@{Matrix$<$ T $>$}|hyperpage}{7}
+\indexentry{Matrix$<$ T $>$@{Matrix$<$ T $>$}!alokuj@{alokuj}|hyperpage}{7}
+\indexentry{alokuj@{alokuj}!Matrix$<$ T $>$@{Matrix$<$ T $>$}|hyperpage}{7}
+\indexentry{Matrix$<$ T $>$@{Matrix$<$ T $>$}!diagonalna@{diagonalna}|hyperpage}{7}
+\indexentry{diagonalna@{diagonalna}!Matrix$<$ T $>$@{Matrix$<$ T $>$}|hyperpage}{7}
+\indexentry{Matrix$<$ T $>$@{Matrix$<$ T $>$}!diagonalna\_k@{diagonalna\_k}|hyperpage}{7}
+\indexentry{diagonalna\_k@{diagonalna\_k}!Matrix$<$ T $>$@{Matrix$<$ T $>$}|hyperpage}{7}
+\indexentry{Matrix$<$ T $>$@{Matrix$<$ T $>$}!dowroc@{dowroc}|hyperpage}{8}
+\indexentry{dowroc@{dowroc}!Matrix$<$ T $>$@{Matrix$<$ T $>$}|hyperpage}{8}
+\indexentry{Matrix$<$ T $>$@{Matrix$<$ T $>$}!kolumna@{kolumna}|hyperpage}{8}
+\indexentry{kolumna@{kolumna}!Matrix$<$ T $>$@{Matrix$<$ T $>$}|hyperpage}{8}
+\indexentry{Matrix$<$ T $>$@{Matrix$<$ T $>$}!losuj@{losuj}|hyperpage}{8}
+\indexentry{losuj@{losuj}!Matrix$<$ T $>$@{Matrix$<$ T $>$}|hyperpage}{8}
+\indexentry{Matrix$<$ T $>$@{Matrix$<$ T $>$}!losuj@{losuj}|hyperpage}{9}
+\indexentry{losuj@{losuj}!Matrix$<$ T $>$@{Matrix$<$ T $>$}|hyperpage}{9}
+\indexentry{Matrix$<$ T $>$@{Matrix$<$ T $>$}!nad\_przekatna@{nad\_przekatna}|hyperpage}{9}
+\indexentry{nad\_przekatna@{nad\_przekatna}!Matrix$<$ T $>$@{Matrix$<$ T $>$}|hyperpage}{9}
+\indexentry{Matrix$<$ T $>$@{Matrix$<$ T $>$}!pod\_przekatna@{pod\_przekatna}|hyperpage}{9}
+\indexentry{pod\_przekatna@{pod\_przekatna}!Matrix$<$ T $>$@{Matrix$<$ T $>$}|hyperpage}{9}
+\indexentry{Matrix$<$ T $>$@{Matrix$<$ T $>$}!pokaz@{pokaz}|hyperpage}{9}
+\indexentry{pokaz@{pokaz}!Matrix$<$ T $>$@{Matrix$<$ T $>$}|hyperpage}{9}
+\indexentry{Matrix$<$ T $>$@{Matrix$<$ T $>$}!przekatna@{przekatna}|hyperpage}{10}
+\indexentry{przekatna@{przekatna}!Matrix$<$ T $>$@{Matrix$<$ T $>$}|hyperpage}{10}
+\indexentry{Matrix$<$ T $>$@{Matrix$<$ T $>$}!wiersz@{wiersz}|hyperpage}{10}
+\indexentry{wiersz@{wiersz}!Matrix$<$ T $>$@{Matrix$<$ T $>$}|hyperpage}{10}
+\indexentry{Matrix$<$ T $>$@{Matrix$<$ T $>$}!wypisz@{wypisz}|hyperpage}{10}
+\indexentry{wypisz@{wypisz}!Matrix$<$ T $>$@{Matrix$<$ T $>$}|hyperpage}{10}
+\indexentry{src/main.cpp@{src/main.cpp}|hyperpage}{11}
+\indexentry{main.cpp@{main.cpp}!main@{main}|hyperpage}{11}
+\indexentry{main@{main}!main.cpp@{main.cpp}|hyperpage}{11}
+\indexentry{src/Matrix.hpp@{src/Matrix.hpp}|hyperpage}{11}
+\indexentry{src/Matrix.hpp@{src/Matrix.hpp}|hyperpage}{12}

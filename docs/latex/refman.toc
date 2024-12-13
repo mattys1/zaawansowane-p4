@@ -4,14 +4,31 @@
 \contentsline {chapter}{\numberline {2}File Index}{3}{chapter.2}%
 \contentsline {section}{\numberline {2.1}File List}{3}{section.2.1}%
 \contentsline {chapter}{\numberline {3}Class Documentation}{5}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Merge\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sorter$<$ T $>$ Class Template Reference}{5}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Detailed Description}{5}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Member Function Documentation}{5}{subsection.3.1.2}%
-\contentsline {subsubsection}{\numberline {3.1.2.1}operator()()}{5}{subsubsection.3.1.2.1}%
-\contentsline {chapter}{\numberline {4}File Documentation}{7}{chapter.4}%
-\contentsline {section}{\numberline {4.1}src/main.cpp File Reference}{7}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Function Documentation}{7}{subsection.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.1.1}main()}{7}{subsubsection.4.1.1.1}%
-\contentsline {section}{\numberline {4.2}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Merge\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sorter.hpp File Reference}{7}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Merge\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sorter.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{8}{section.4.3}%
-\contentsline {chapter}{Index}{9}{section*.5}%
+\contentsline {section}{\numberline {3.1}Matrix$<$ T $>$ Class Template Reference}{5}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Detailed Description}{6}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Constructor \& Destructor Documentation}{6}{subsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.1}Matrix()\hspace {0.1cm}{\footnotesize \ttfamily [1/4]}}{6}{subsubsection.3.1.2.1}%
+\contentsline {subsubsection}{\numberline {3.1.2.2}Matrix()\hspace {0.1cm}{\footnotesize \ttfamily [2/4]}}{6}{subsubsection.3.1.2.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.3}Matrix()\hspace {0.1cm}{\footnotesize \ttfamily [3/4]}}{6}{subsubsection.3.1.2.3}%
+\contentsline {subsubsection}{\numberline {3.1.2.4}Matrix()\hspace {0.1cm}{\footnotesize \ttfamily [4/4]}}{7}{subsubsection.3.1.2.4}%
+\contentsline {subsection}{\numberline {3.1.3}Member Function Documentation}{7}{subsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.3.1}alokuj()}{7}{subsubsection.3.1.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.3.2}diagonalna()}{7}{subsubsection.3.1.3.2}%
+\contentsline {subsubsection}{\numberline {3.1.3.3}diagonalna\_k()}{8}{subsubsection.3.1.3.3}%
+\contentsline {subsubsection}{\numberline {3.1.3.4}dowroc()}{8}{subsubsection.3.1.3.4}%
+\contentsline {subsubsection}{\numberline {3.1.3.5}kolumna()}{8}{subsubsection.3.1.3.5}%
+\contentsline {subsubsection}{\numberline {3.1.3.6}losuj()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{8}{subsubsection.3.1.3.6}%
+\contentsline {subsubsection}{\numberline {3.1.3.7}losuj()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{9}{subsubsection.3.1.3.7}%
+\contentsline {subsubsection}{\numberline {3.1.3.8}nad\_przekatna()}{9}{subsubsection.3.1.3.8}%
+\contentsline {subsubsection}{\numberline {3.1.3.9}pod\_przekatna()}{9}{subsubsection.3.1.3.9}%
+\contentsline {subsubsection}{\numberline {3.1.3.10}pokaz()}{9}{subsubsection.3.1.3.10}%
+\contentsline {subsubsection}{\numberline {3.1.3.11}przekatna()}{10}{subsubsection.3.1.3.11}%
+\contentsline {subsubsection}{\numberline {3.1.3.12}wiersz()}{10}{subsubsection.3.1.3.12}%
+\contentsline {subsubsection}{\numberline {3.1.3.13}wypisz()}{10}{subsubsection.3.1.3.13}%
+\contentsline {chapter}{\numberline {4}File Documentation}{11}{chapter.4}%
+\contentsline {section}{\numberline {4.1}src/main.cpp File Reference}{11}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Function Documentation}{11}{subsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.1}main()}{11}{subsubsection.4.1.1.1}%
+\contentsline {section}{\numberline {4.2}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Matrix.hpp File Reference}{11}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Matrix.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{12}{section.4.3}%
+\contentsline {chapter}{Index}{15}{section*.5}%
