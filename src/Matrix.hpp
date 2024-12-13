@@ -133,4 +133,11 @@ public:
 		return *this;
 	}
 
+	Matrix& wiersz(int x, int* t) {
+		for(int i = 0; i < data.size(); i++){
+			data[x][i] = t[i];
+		}
+
+		return *this;
+	}
 };
