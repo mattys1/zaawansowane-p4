@@ -105,4 +105,24 @@ public:
 
 		return *this;
 	}
+
+	// po przekątnej są wpisane dane z tabeli, 
+	/* a pozostałe elementy są równe 0. Parametr k może oznaczać: 0 - przekątna  */
+	/* przechodząca przez środek (czyli tak jak metoda diagonalna), cyfra dodatnia przesuwa  */
+	/* diagonalną do góry macierzy o podaną cyfrę, cyfra ujemna przesuwa diagonalną  */
+	/* w dół o podaną cyfrę,  */
+	Matrix& diagonalna_k(int k, int* t) {
+		for(int i = 0; i < data.size(); i++){
+			for(int j = 0; j < data.size(); j++){
+				if(i == j + k){
+					data[i][j] = t[j];
+				} else {
+					data[i][j] = 0;
+				}
+			}
+		}
+
+		return *this;
+	}
+
 };
