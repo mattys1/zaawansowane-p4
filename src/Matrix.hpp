@@ -156,4 +156,20 @@ public:
 
 		return *this;
 	}
+
+	//uzupełnia macierz: 1-pod przekątną, 0-nad 
+	/* przekątną i po przekątnej,  */
+	Matrix& pod_przekatna(void) {
+		for(int i = 0; i < data.size(); i++){
+			for(int j = 0; j < data.size(); j++){
+				if(i > j){
+					data[i][j] = 1;
+				} else {
+					data[i][j] = 0;
+				}
+			}
+		}
+
+		return *this;
+	}
 };
