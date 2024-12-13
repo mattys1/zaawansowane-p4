@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]]
+  ['alokuj_0',['alokuj',['../classMatrix.html#ac7d3c7f02d1b34a5082a88c8d9ee05be',1,'Matrix']]]
 ];

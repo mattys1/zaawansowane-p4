@@ -1,0 +1,349 @@
+\doxysection{Matrix\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classMatrix}{}\label{classMatrix}\index{Matrix$<$ T $>$@{Matrix$<$ T $>$}}
+
+
+Klasa reprezentująca macierz.  
+
+
+
+
+{\ttfamily \#include $<$Matrix.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMatrix_a2da0a5bd16e6e2bf901d7e2ddc00c268}{Matrix}} (void)
+\begin{DoxyCompactList}\small\item\em Konstruktor domyślny. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMatrix_a8cffdb8f1ab89cfd07d58a64a0af3528}{Matrix}} (int n)
+\begin{DoxyCompactList}\small\item\em Konstruktor tworzący macierz o rozmiarze n x n. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMatrix_a6dc30e5a9c117d5462c3abd9e6a6cef2}{Matrix}} (int n, int \texorpdfstring{$\ast$}{*}t)
+\begin{DoxyCompactList}\small\item\em Konstruktor tworzący macierz o rozmiarze n x n i wypełniający ją danymi z tablicy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMatrix_a0b62de5a33dce9839d3953f9ad2c547c}{Matrix}} (\mbox{\hyperlink{classMatrix}{Matrix}} const \&m)
+\begin{DoxyCompactList}\small\item\em Konstruktor kopiujący. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMatrix_a25959aacfe474559046fbad8363c2fd9}{wypisz}} (void)
+\begin{DoxyCompactList}\small\item\em Wypisuje zawartość macierzy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMatrix}{Matrix}} \& \mbox{\hyperlink{classMatrix_ac7d3c7f02d1b34a5082a88c8d9ee05be}{alokuj}} (int n)
+\begin{DoxyCompactList}\small\item\em Alokuje pamięć dla macierzy o rozmiarze n x n. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classMatrix_afebea0d35ed9f69d221567dd3409bc3b}{pokaz}} (int x, int y) const
+\begin{DoxyCompactList}\small\item\em Zwraca wartość elementu macierzy na pozycji (x, y). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMatrix}{Matrix}} \& \mbox{\hyperlink{classMatrix_ae8ea6c7998c1ec803de0c01d9b23ba69}{dowroc}} (void)
+\begin{DoxyCompactList}\small\item\em Odwraca macierz (transpozycja). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMatrix}{Matrix}} \& \mbox{\hyperlink{classMatrix_a04f0a2b01780285444f3a9b191171378}{losuj}} (void)
+\begin{DoxyCompactList}\small\item\em Wypełnia macierz losowymi wartościami od 0 do 9. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMatrix}{Matrix}} \& \mbox{\hyperlink{classMatrix_a459516f6bc904bd98410dd8c7a2c82e3}{losuj}} (int x)
+\begin{DoxyCompactList}\small\item\em Wypełnia x losowych elementów macierzy wartościami od 0 do 9. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMatrix}{Matrix}} \& \mbox{\hyperlink{classMatrix_a1e2a664daf31cfffdeb0494a09cb83b4}{diagonalna}} (const int \texorpdfstring{$\ast$}{*}t)
+\begin{DoxyCompactList}\small\item\em Wypełnia przekątną macierzy wartościami z tablicy t, pozostałe elementy są równe 0. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMatrix}{Matrix}} \& \mbox{\hyperlink{classMatrix_a6587ee7609a46cc1087eb1e6fc9ac127}{diagonalna\+\_\+k}} (int k, const int \texorpdfstring{$\ast$}{*}t)
+\begin{DoxyCompactList}\small\item\em Wypełnia przekątną macierzy wartościami z tablicy t, przesuniętą o k pozycji. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMatrix}{Matrix}} \& \mbox{\hyperlink{classMatrix_a0164bf11062bb12496e928ee21ab2911}{kolumna}} (int x, const int \texorpdfstring{$\ast$}{*}t)
+\begin{DoxyCompactList}\small\item\em Wypełnia kolumnę x wartościami z tablicy t. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMatrix}{Matrix}} \& \mbox{\hyperlink{classMatrix_ab2f554376fb559a05d2b4789e0b0bc75}{wiersz}} (int x, const int \texorpdfstring{$\ast$}{*}t)
+\begin{DoxyCompactList}\small\item\em Wypełnia wiersz x wartościami z tablicy t. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMatrix}{Matrix}} \& \mbox{\hyperlink{classMatrix_aaa16e344e5f7e2afd97857f517039780}{przekatna}} (void)
+\begin{DoxyCompactList}\small\item\em Wypełnia macierz\+: 1 na przekątnej, 0 poza przekątną. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMatrix}{Matrix}} \& \mbox{\hyperlink{classMatrix_a794292f429843b21eaf1c85ad49ea660}{pod\+\_\+przekatna}} (void)
+\begin{DoxyCompactList}\small\item\em Wypełnia macierz\+: 1 pod przekątną, 0 nad przekątną i na przekątnej. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMatrix}{Matrix}} \& \mbox{\hyperlink{classMatrix_a9152dab53ca035dd1e02ab208d15f669}{nad\+\_\+przekatna}} (void)
+\begin{DoxyCompactList}\small\item\em Wypełnia macierz\+: 1 nad przekątną, 0 pod przekątną i na przekątnej. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Matrix$<$ T $>$}
+Klasa reprezentująca macierz. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Typ danych przechowywanych w macierzy. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMatrix_a2da0a5bd16e6e2bf901d7e2ddc00c268}\index{Matrix$<$ T $>$@{Matrix$<$ T $>$}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Matrix$<$ T $>$@{Matrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{classMatrix_a2da0a5bd16e6e2bf901d7e2ddc00c268} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{classMatrix}{Matrix}}$<$ T $>$\mbox{\hyperlink{classMatrix}{\+::\+Matrix}} (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor domyślny. 
+
+\Hypertarget{classMatrix_a8cffdb8f1ab89cfd07d58a64a0af3528}\index{Matrix$<$ T $>$@{Matrix$<$ T $>$}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Matrix$<$ T $>$@{Matrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{classMatrix_a8cffdb8f1ab89cfd07d58a64a0af3528} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{classMatrix}{Matrix}}$<$ T $>$\mbox{\hyperlink{classMatrix}{\+::\+Matrix}} (\begin{DoxyParamCaption}\item[{int}]{n}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor tworzący macierz o rozmiarze n x n. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Rozmiar macierzy. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMatrix_a6dc30e5a9c117d5462c3abd9e6a6cef2}\index{Matrix$<$ T $>$@{Matrix$<$ T $>$}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Matrix$<$ T $>$@{Matrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{classMatrix_a6dc30e5a9c117d5462c3abd9e6a6cef2} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{classMatrix}{Matrix}}$<$ T $>$\mbox{\hyperlink{classMatrix}{\+::\+Matrix}} (\begin{DoxyParamCaption}\item[{int}]{n}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor tworzący macierz o rozmiarze n x n i wypełniający ją danymi z tablicy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Rozmiar macierzy. \\
+\hline
+{\em t} & Wskaźnik do tablicy z danymi. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMatrix_a0b62de5a33dce9839d3953f9ad2c547c}\index{Matrix$<$ T $>$@{Matrix$<$ T $>$}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Matrix$<$ T $>$@{Matrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{classMatrix_a0b62de5a33dce9839d3953f9ad2c547c} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{classMatrix}{Matrix}}$<$ T $>$\mbox{\hyperlink{classMatrix}{\+::\+Matrix}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMatrix}{Matrix}}$<$ T $>$ const \&}]{m}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor kopiujący. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & Obiekt macierzy do skopiowania. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMatrix_ac7d3c7f02d1b34a5082a88c8d9ee05be}\index{Matrix$<$ T $>$@{Matrix$<$ T $>$}!alokuj@{alokuj}}
+\index{alokuj@{alokuj}!Matrix$<$ T $>$@{Matrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{alokuj()}{alokuj()}}
+{\footnotesize\ttfamily \label{classMatrix_ac7d3c7f02d1b34a5082a88c8d9ee05be} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{classMatrix}{Matrix}} \& \mbox{\hyperlink{classMatrix}{Matrix}}$<$ T $>$\+::alokuj (\begin{DoxyParamCaption}\item[{int}]{n}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Alokuje pamięć dla macierzy o rozmiarze n x n. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Rozmiar macierzy. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Referencja do obiektu macierzy. 
+\end{DoxyReturn}
+\Hypertarget{classMatrix_a1e2a664daf31cfffdeb0494a09cb83b4}\index{Matrix$<$ T $>$@{Matrix$<$ T $>$}!diagonalna@{diagonalna}}
+\index{diagonalna@{diagonalna}!Matrix$<$ T $>$@{Matrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{diagonalna()}{diagonalna()}}
+{\footnotesize\ttfamily \label{classMatrix_a1e2a664daf31cfffdeb0494a09cb83b4} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{classMatrix}{Matrix}} \& \mbox{\hyperlink{classMatrix}{Matrix}}$<$ T $>$\+::diagonalna (\begin{DoxyParamCaption}\item[{const int \texorpdfstring{$\ast$}{*}}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Wypełnia przekątną macierzy wartościami z tablicy t, pozostałe elementy są równe 0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Wskaźnik do tablicy z wartościami. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Referencja do obiektu macierzy. 
+\end{DoxyReturn}
+\Hypertarget{classMatrix_a6587ee7609a46cc1087eb1e6fc9ac127}\index{Matrix$<$ T $>$@{Matrix$<$ T $>$}!diagonalna\_k@{diagonalna\_k}}
+\index{diagonalna\_k@{diagonalna\_k}!Matrix$<$ T $>$@{Matrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{diagonalna\_k()}{diagonalna\_k()}}
+{\footnotesize\ttfamily \label{classMatrix_a6587ee7609a46cc1087eb1e6fc9ac127} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{classMatrix}{Matrix}} \& \mbox{\hyperlink{classMatrix}{Matrix}}$<$ T $>$\+::diagonalna\+\_\+k (\begin{DoxyParamCaption}\item[{int}]{k}{, }\item[{const int \texorpdfstring{$\ast$}{*}}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Wypełnia przekątną macierzy wartościami z tablicy t, przesuniętą o k pozycji. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & Przesunięcie przekątnej. \\
+\hline
+{\em t} & Wskaźnik do tablicy z wartościami. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Referencja do obiektu macierzy. 
+\end{DoxyReturn}
+\Hypertarget{classMatrix_ae8ea6c7998c1ec803de0c01d9b23ba69}\index{Matrix$<$ T $>$@{Matrix$<$ T $>$}!dowroc@{dowroc}}
+\index{dowroc@{dowroc}!Matrix$<$ T $>$@{Matrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{dowroc()}{dowroc()}}
+{\footnotesize\ttfamily \label{classMatrix_ae8ea6c7998c1ec803de0c01d9b23ba69} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{classMatrix}{Matrix}} \& \mbox{\hyperlink{classMatrix}{Matrix}}$<$ T $>$\+::dowroc (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Odwraca macierz (transpozycja). 
+
+\begin{DoxyReturn}{Returns}
+Referencja do obiektu macierzy. 
+\end{DoxyReturn}
+\Hypertarget{classMatrix_a0164bf11062bb12496e928ee21ab2911}\index{Matrix$<$ T $>$@{Matrix$<$ T $>$}!kolumna@{kolumna}}
+\index{kolumna@{kolumna}!Matrix$<$ T $>$@{Matrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{kolumna()}{kolumna()}}
+{\footnotesize\ttfamily \label{classMatrix_a0164bf11062bb12496e928ee21ab2911} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{classMatrix}{Matrix}} \& \mbox{\hyperlink{classMatrix}{Matrix}}$<$ T $>$\+::kolumna (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{const int \texorpdfstring{$\ast$}{*}}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Wypełnia kolumnę x wartościami z tablicy t. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Numer kolumny. \\
+\hline
+{\em t} & Wskaźnik do tablicy z wartościami. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Referencja do obiektu macierzy. 
+\end{DoxyReturn}
+\Hypertarget{classMatrix_a459516f6bc904bd98410dd8c7a2c82e3}\index{Matrix$<$ T $>$@{Matrix$<$ T $>$}!losuj@{losuj}}
+\index{losuj@{losuj}!Matrix$<$ T $>$@{Matrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{losuj()}{losuj()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classMatrix_a459516f6bc904bd98410dd8c7a2c82e3} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{classMatrix}{Matrix}} \& \mbox{\hyperlink{classMatrix}{Matrix}}$<$ T $>$\+::losuj (\begin{DoxyParamCaption}\item[{int}]{x}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Wypełnia x losowych elementów macierzy wartościami od 0 do 9. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Liczba elementów do wypełnienia. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Referencja do obiektu macierzy. 
+\end{DoxyReturn}
+\Hypertarget{classMatrix_a04f0a2b01780285444f3a9b191171378}\index{Matrix$<$ T $>$@{Matrix$<$ T $>$}!losuj@{losuj}}
+\index{losuj@{losuj}!Matrix$<$ T $>$@{Matrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{losuj()}{losuj()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classMatrix_a04f0a2b01780285444f3a9b191171378} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{classMatrix}{Matrix}} \& \mbox{\hyperlink{classMatrix}{Matrix}}$<$ T $>$\+::losuj (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Wypełnia macierz losowymi wartościami od 0 do 9. 
+
+\begin{DoxyReturn}{Returns}
+Referencja do obiektu macierzy. 
+\end{DoxyReturn}
+\Hypertarget{classMatrix_a9152dab53ca035dd1e02ab208d15f669}\index{Matrix$<$ T $>$@{Matrix$<$ T $>$}!nad\_przekatna@{nad\_przekatna}}
+\index{nad\_przekatna@{nad\_przekatna}!Matrix$<$ T $>$@{Matrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{nad\_przekatna()}{nad\_przekatna()}}
+{\footnotesize\ttfamily \label{classMatrix_a9152dab53ca035dd1e02ab208d15f669} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{classMatrix}{Matrix}} \& \mbox{\hyperlink{classMatrix}{Matrix}}$<$ T $>$\+::nad\+\_\+przekatna (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Wypełnia macierz\+: 1 nad przekątną, 0 pod przekątną i na przekątnej. 
+
+\begin{DoxyReturn}{Returns}
+Referencja do obiektu macierzy. 
+\end{DoxyReturn}
+\Hypertarget{classMatrix_a794292f429843b21eaf1c85ad49ea660}\index{Matrix$<$ T $>$@{Matrix$<$ T $>$}!pod\_przekatna@{pod\_przekatna}}
+\index{pod\_przekatna@{pod\_przekatna}!Matrix$<$ T $>$@{Matrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pod\_przekatna()}{pod\_przekatna()}}
+{\footnotesize\ttfamily \label{classMatrix_a794292f429843b21eaf1c85ad49ea660} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{classMatrix}{Matrix}} \& \mbox{\hyperlink{classMatrix}{Matrix}}$<$ T $>$\+::pod\+\_\+przekatna (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Wypełnia macierz\+: 1 pod przekątną, 0 nad przekątną i na przekątnej. 
+
+\begin{DoxyReturn}{Returns}
+Referencja do obiektu macierzy. 
+\end{DoxyReturn}
+\Hypertarget{classMatrix_afebea0d35ed9f69d221567dd3409bc3b}\index{Matrix$<$ T $>$@{Matrix$<$ T $>$}!pokaz@{pokaz}}
+\index{pokaz@{pokaz}!Matrix$<$ T $>$@{Matrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pokaz()}{pokaz()}}
+{\footnotesize\ttfamily \label{classMatrix_afebea0d35ed9f69d221567dd3409bc3b} 
+template$<$typename T $>$ \\
+int \mbox{\hyperlink{classMatrix}{Matrix}}$<$ T $>$\+::pokaz (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Zwraca wartość elementu macierzy na pozycji (x, y). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Wiersz. \\
+\hline
+{\em y} & Kolumna. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Wartość elementu macierzy. 
+\end{DoxyReturn}
+\Hypertarget{classMatrix_aaa16e344e5f7e2afd97857f517039780}\index{Matrix$<$ T $>$@{Matrix$<$ T $>$}!przekatna@{przekatna}}
+\index{przekatna@{przekatna}!Matrix$<$ T $>$@{Matrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{przekatna()}{przekatna()}}
+{\footnotesize\ttfamily \label{classMatrix_aaa16e344e5f7e2afd97857f517039780} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{classMatrix}{Matrix}} \& \mbox{\hyperlink{classMatrix}{Matrix}}$<$ T $>$\+::przekatna (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Wypełnia macierz\+: 1 na przekątnej, 0 poza przekątną. 
+
+\begin{DoxyReturn}{Returns}
+Referencja do obiektu macierzy. 
+\end{DoxyReturn}
+\Hypertarget{classMatrix_ab2f554376fb559a05d2b4789e0b0bc75}\index{Matrix$<$ T $>$@{Matrix$<$ T $>$}!wiersz@{wiersz}}
+\index{wiersz@{wiersz}!Matrix$<$ T $>$@{Matrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{wiersz()}{wiersz()}}
+{\footnotesize\ttfamily \label{classMatrix_ab2f554376fb559a05d2b4789e0b0bc75} 
+template$<$typename T $>$ \\
+\mbox{\hyperlink{classMatrix}{Matrix}} \& \mbox{\hyperlink{classMatrix}{Matrix}}$<$ T $>$\+::wiersz (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{const int \texorpdfstring{$\ast$}{*}}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Wypełnia wiersz x wartościami z tablicy t. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Numer wiersza. \\
+\hline
+{\em t} & Wskaźnik do tablicy z wartościami. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Referencja do obiektu macierzy. 
+\end{DoxyReturn}
+\Hypertarget{classMatrix_a25959aacfe474559046fbad8363c2fd9}\index{Matrix$<$ T $>$@{Matrix$<$ T $>$}!wypisz@{wypisz}}
+\index{wypisz@{wypisz}!Matrix$<$ T $>$@{Matrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{wypisz()}{wypisz()}}
+{\footnotesize\ttfamily \label{classMatrix_a25959aacfe474559046fbad8363c2fd9} 
+template$<$typename T $>$ \\
+void \mbox{\hyperlink{classMatrix}{Matrix}}$<$ T $>$\+::wypisz (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Wypisuje zawartość macierzy. 
+

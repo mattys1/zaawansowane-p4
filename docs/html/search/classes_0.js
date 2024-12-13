@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mergesorter_0',['MergeSorter',['../classMergeSorter.html',1,'']]]
+  ['matrix_0',['Matrix',['../classMatrix.html',1,'']]]
 ];
