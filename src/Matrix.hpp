@@ -140,4 +140,20 @@ public:
 
 		return *this;
 	}
+
+	//uzupełnia macierz: 1-na przekątnej, 0-poza 
+	/* przekątną,  */
+	Matrix& przekatna(void) {
+		for(int i = 0; i < data.size(); i++){
+			for(int j = 0; j < data.size(); j++){
+				if(i == j){
+					data[i][j] = 1;
+				} else {
+					data[i][j] = 0;
+				}
+			}
+		}
+
+		return *this;
+	}
 };
