@@ -125,4 +125,12 @@ public:
 		return *this;
 	}
 
+	Matrix& kolumna(int x, int* t) {
+		for(int i = 0; i < data.size(); i++){
+			data[i][x] = t[i];
+		}
+
+		return *this;
+	}
+
 };
