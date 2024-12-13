@@ -1,5 +1,6 @@
 #include <random>
 #include <vector>
+#include <print>
 
 template <typename T>
 
@@ -25,6 +26,16 @@ public:
 	} 
 
 	Matrix(Matrix const& m) : data(m.data) {}
+
+	void wypisz(void) {
+		for(const auto& row : data){
+			for(const auto& elem : row) {
+				std::print("{} ", elem);
+			}
+			
+			std::println();
+		}
+	}
 
 	Matrix& alokuj(int n){
 		if(data.size() == 0){
@@ -91,6 +102,7 @@ public:
 				}
 			}
 		}
+
 		return *this;
 	}
 };
