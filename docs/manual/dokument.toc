@@ -2,20 +2,19 @@
 \contentsline {section}{\numberline {1}Ogólne określenie wymagań}{3}{section.1}%
 \contentsline {section}{\numberline {2}Analiza problemu}{4}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Algorytm Merge Sort}{4}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Git}{4}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Doxygen}{6}{subsection.2.3}%
-\contentsline {section}{\numberline {3}Projektowanie}{7}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Implementacja drzewa BTS}{7}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Git}{7}{subsection.3.2}%
+\contentsline {subsection}{\numberline {2.2}Git}{5}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Doxygen}{7}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Google Test}{7}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Projektowanie}{8}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Implementacja Merge Sort}{8}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Git}{8}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Doxygen}{8}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Implementacja}{9}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Ogólne informacje o implementacji klas}{9}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Klasa BSTTree}{9}{subsubsection.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.2}Klasa FileTree}{13}{subsubsection.4.1.2}%
-\contentsline {subsubsection}{\numberline {4.1.3}Klasa main}{18}{subsubsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.2}Ciekawe fragmenty kodu}{21}{subsection.4.2}%
-\contentsline {section}{\numberline {5}Wnioski}{23}{section.5}%
-\contentsline {section}{Literatura}{24}{section.5}%
-\contentsline {section}{Spis rysunków}{25}{section*.9}%
-\contentsline {section}{Spis tabel}{26}{section*.9}%
-\contentsline {section}{Spis listingów}{27}{section*.9}%
+\contentsline {subsection}{\numberline {3.4}Google Test}{9}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Implementacja}{11}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Klasa MergeSorter}{11}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Testy}{12}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Wnioski}{14}{section.5}%
+\contentsline {section}{Literatura}{15}{section.5}%
+\contentsline {section}{Spis rysunków}{16}{section*.9}%
+\contentsline {section}{Spis tabel}{17}{section*.9}%
+\contentsline {section}{Spis listingów}{18}{section*.9}%
