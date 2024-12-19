@@ -268,13 +268,28 @@ public:
 
 	//..................................................................
 
-	// wstaw(int x, int y, int wartosc)
+	/**
+ * @brief Wstawia wartość do macierzy na podaną pozycję.
+ * @param x Indeks wiersza.
+ * @param y Indeks kolumny.
+ * @param wartosc Wartość, którą wstawiamy do macierzy.
+ * @return Zwraca referencję do bieżącej macierzy (this).
+ *
+ * Metoda wstawia liczbę do macierzy w odpowiednie miejsce.
+ * Dzięki temu można zmienić zawartość macierzy w dowolnym miejscu.
+ */
 	Matrix& wstaw(int x, int y, int wartosc) {
 		data[x][y] = wartosc;
 		return *this;
 	}
 
-	// szachownica()
+	/**
+	 * @brief Tworzy wzór szachownicy w macierzy.
+	 * @return Zwraca referencję do bieżącej macierzy (this).
+	 *
+	 * Metoda ustawia w macierzy wzór podobny do szachownicy,
+	 * gdzie pola naprzemiennie mają wartość 0 lub 1.
+	 */
 	Matrix& szachownica(void) {
 		for (int i = 0; i < (int)data.size(); i++) {
 			for (int j = 0; j < (int)data.size(); j++) {
@@ -284,11 +299,17 @@ public:
 		return *this;
 	}
 
-	// operator+(matrix& m) // A = A + m
+	/**
+	 * @brief Dodaje do macierzy inną macierz element po elemencie.
+	 * @param m Druga macierz, którą dodajemy.
+	 * @return Zwraca referencję do bieżącej macierzy (this).
+	 *
+	 * Dodaje wszystkie elementy macierzy m do bieżącej macierzy A.
+	 * Jeśli rozmiary się nie zgadzają, nic nie robi.
+	 */
 	Matrix& operator+(Matrix const& m) {
 		// Sprawdzenie wymiarów
 		if (data.size() != m.data.size()) {
-			// Nie zmieniamy nic jeśli wymiary nie pasują
 			return *this;
 		}
 
@@ -300,12 +321,18 @@ public:
 		return *this;
 	}
 
-	// operator*(matrix& m) // A = A * m
+	/**
+	 * @brief Mnoży macierz przez inną macierz.
+	 * @param m Macierz, przez którą mnożymy.
+	 * @return Zwraca referencję do bieżącej macierzy (this).
+	 *
+	 * Wykonuje klasyczne mnożenie macierzy kwadratowych.
+	 * Jeśli rozmiary się nie zgadzają, nic nie zmienia.
+	 * Wynikiem jest A = A * m.
+	 */
 	Matrix& operator*(Matrix const& m) {
-		// Sprawdzenie czy można mnożyć: (n x n) * (n x n) -> OK jeżeli rozmiary są takie same
 		int n = (int)data.size();
 		if (n == 0 || n != (int)m.data.size()) {
-			// Nie zmieniamy nic jeśli nie da się mnożyć
 			return *this;
 		}
 
@@ -323,7 +350,11 @@ public:
 		return *this;
 	}
 
-	// operator+(int a) // A = A + a
+	/**
+	 * @brief Dodaje do każdego elementu macierzy liczbę całkowitą.
+	 * @param a Liczba, którą dodajemy do elementów macierzy.
+	 * @return Zwraca referencję do bieżącej macierzy (this).
+	 */
 	Matrix& operator+(int a) {
 		for (auto& row : data) {
 			for (auto& elem : row) {
@@ -333,7 +364,11 @@ public:
 		return *this;
 	}
 
-	// operator*(int a) // A = A * a
+	/**
+	 * @brief Mnoży każdy element macierzy przez liczbę całkowitą.
+	 * @param a Liczba, przez którą mnożymy elementy macierzy.
+	 * @return Zwraca referencję do bieżącej macierzy (this).
+	 */
 	Matrix& operator*(int a) {
 		for (auto& row : data) {
 			for (auto& elem : row) {
@@ -343,7 +378,11 @@ public:
 		return *this;
 	}
 
-	// operator-(int a) // A = A - a
+	/**
+	 * @brief Odejmuje od każdego elementu macierzy liczbę całkowitą.
+	 * @param a Liczba, którą odejmujemy od elementów macierzy.
+	 * @return Zwraca referencję do bieżącej macierzy (this).
+	 */
 	Matrix& operator-(int a) {
 		for (auto& row : data) {
 			for (auto& elem : row) {
@@ -353,7 +392,12 @@ public:
 		return *this;
 	}
 
-	// friend matrix operator+(int a, matrix& m)
+	/**
+	 * @brief Dodaje liczbę całkowitą do każdego elementu macierzy (postać a + m).
+	 * @param a Liczba do dodania.
+	 * @param m Macierz, do której dodajemy liczbę.
+	 * @return Nowa macierz z dodaną liczbą a.
+	 */
 	friend Matrix operator+(int a, Matrix const& m) {
 		Matrix result(m);
 		for (auto& row : result.data) {
@@ -364,7 +408,12 @@ public:
 		return result;
 	}
 
-	// friend matrix operator*(int a, matrix& m)
+	/**
+	 * @brief Mnoży każdy element macierzy przez liczbę całkowitą (postać a * m).
+	 * @param a Liczba przez którą mnożymy.
+	 * @param m Macierz, której elementy mnożymy.
+	 * @return Nowa macierz po pomnożeniu.
+	 */
 	friend Matrix operator*(int a, Matrix const& m) {
 		Matrix result(m);
 		for (auto& row : result.data) {
@@ -375,7 +424,12 @@ public:
 		return result;
 	}
 
-	// friend matrix operator-(int a, matrix& m)
+	/**
+	 * @brief Odejmuje każdy element macierzy od liczby a (postać a - m).
+	 * @param a Liczba od której odejmujemy.
+	 * @param m Macierz, której elementy odejmujemy.
+	 * @return Nowa macierz po odjęciu.
+	 */
 	friend Matrix operator-(int a, Matrix const& m) {
 		Matrix result(m);
 		for (auto& row : result.data) {
@@ -386,7 +440,12 @@ public:
 		return result;
 	}
 
-	// operator++(int) // A++ zwiększa wszystkie elementy o 1
+	/**
+	 * @brief Operator postinkrementacji - zwiększa każdy element o 1.
+	 * @return Zwraca referencję do bieżącej macierzy (this).
+	 *
+	 * Po wykonaniu A++ każdy element w A jest większy o 1.
+	 */
 	Matrix& operator++(int) {
 		for (auto& row : data) {
 			for (auto& elem : row) {
@@ -396,7 +455,12 @@ public:
 		return *this;
 	}
 
-	// operator--(int) // A-- zmniejsza wszystkie elementy o 1
+	/**
+	 * @brief Operator postdekrementacji - zmniejsza każdy element o 1.
+	 * @return Zwraca referencję do bieżącej macierzy (this).
+	 *
+	 * Po wykonaniu A-- każdy element w A jest mniejszy o 1.
+	 */
 	Matrix& operator--(int) {
 		for (auto& row : data) {
 			for (auto& elem : row) {
@@ -406,7 +470,11 @@ public:
 		return *this;
 	}
 
-	// operator+=(int a) // każdy element powiększamy o a
+	/**
+	 * @brief Dodaje liczbę całkowitą do każdego elementu macierzy (A += a).
+	 * @param a Liczba do dodania.
+	 * @return Zwraca referencję do bieżącej macierzy (this).
+	 */
 	Matrix& operator+=(int a) {
 		for (auto& row : data) {
 			for (auto& elem : row) {
@@ -416,7 +484,11 @@ public:
 		return *this;
 	}
 
-	// operator-=(int a)
+	/**
+	 * @brief Odejmuje od każdego elementu macierzy liczbę całkowitą (A -= a).
+	 * @param a Liczba do odjęcia.
+	 * @return Zwraca referencję do bieżącej macierzy (this).
+	 */
 	Matrix& operator-=(int a) {
 		for (auto& row : data) {
 			for (auto& elem : row) {
@@ -426,7 +498,11 @@ public:
 		return *this;
 	}
 
-	// operator*=(int a)
+	/**
+	 * @brief Mnoży każdy element macierzy przez liczbę całkowitą (A *= a).
+	 * @param a Liczba przez którą mnożymy.
+	 * @return Zwraca referencję do bieżącej macierzy (this).
+	 */
 	Matrix& operator*=(int a) {
 		for (auto& row : data) {
 			for (auto& elem : row) {
@@ -436,9 +512,13 @@ public:
 		return *this;
 	}
 
-	// operator()(double a) - interpretacja zadania operator(double)
-	// "wszystkie cyfry są powiększone o część całkowitą z wpisanej cyfry"
-	// Zakładamy więc, że floor(a) dodajemy do każdego elementu.
+	/**
+	 * @brief Dodaje do każdego elementu macierzy część całkowitą z liczby a.
+	 * @param a Liczba typu double, bierzemy floor(a) i dodajemy do każdego elementu.
+	 * @return Zwraca referencję do bieżącej macierzy (this).
+	 *
+	 * Dla przykładu, jeśli a = 3.7 to floor(a) = 3 i dodajemy 3 do każdego elementu.
+	 */
 	Matrix& operator()(double a) {
 		int val = (int)std::floor(a);
 		for (auto& row : data) {
@@ -449,7 +529,14 @@ public:
 		return *this;
 	}
 
-	// operator<<
+	/**
+	 * @brief Wypisuje macierz do strumienia wyjściowego.
+	 * @param o Strumień wyjściowy.
+	 * @param m Macierz do wypisania.
+	 * @return Referencja do strumienia wyjściowego.
+	 *
+	 * Wypisuje elementy macierzy w postaci wierszy. Każdy element jest oddzielony spacją.
+	 */
 	friend std::ostream& operator<<(std::ostream& o, Matrix const& m) {
 		for (const auto& row : m.data) {
 			for (const auto& elem : row) {
@@ -460,7 +547,13 @@ public:
 		return o;
 	}
 
-	// operator==
+	/**
+	 * @brief Sprawdza, czy macierz jest równa innej macierzy.
+	 * @param m Macierz do porównania.
+	 * @return true jeśli są równe, false w przeciwnym razie.
+	 *
+	 * Porównuje elementy o tych samych indeksach.
+	 */
 	bool operator==(const Matrix& m) const {
 		if (data.size() != m.data.size() || data[0].size() != m.data[0].size()) return false;
 		for (int i = 0; i < (int)data.size(); i++) {
@@ -471,7 +564,11 @@ public:
 		return true;
 	}
 
-	// operator>
+	/**
+	 * @brief Sprawdza, czy każda wartość bieżącej macierzy jest większa niż w macierzy m.
+	 * @param m Macierz do porównania.
+	 * @return true jeśli wszystkie elementy A są większe od odpowiadających elementów m, w przeciwnym razie false.
+	 */
 	bool operator>(const Matrix& m) const {
 		if (data.size() != m.data.size() || data[0].size() != m.data[0].size()) return false;
 		for (int i = 0; i < (int)data.size(); i++) {
@@ -482,7 +579,11 @@ public:
 		return true;
 	}
 
-	// operator<
+	/**
+	 * @brief Sprawdza, czy każda wartość bieżącej macierzy jest mniejsza niż w macierzy m.
+	 * @param m Macierz do porównania.
+	 * @return true jeśli wszystkie elementy A są mniejsze od odpowiadających elementów m, w przeciwnym razie false.
+	 */
 	bool operator<(const Matrix& m) const {
 		if (data.size() != m.data.size() || data[0].size() != m.data[0].size()) return false;
 		for (int i = 0; i < (int)data.size(); i++) {
