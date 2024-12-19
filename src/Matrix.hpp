@@ -1,6 +1,8 @@
 #include <random>
 #include <vector>
 #include <print>
+#include <cmath>
+#include <iostream>
 
 /**
  * @brief Klasa reprezentująca macierz.
@@ -128,13 +130,16 @@ public:
 	 * @return Referencja do obiektu macierzy.
 	 */
 	Matrix& losuj(int x) {
+		if (data.size() == 0) return *this;
+
 		std::random_device rd;
 		std::mt19937 gen(rd());
 		std::uniform_int_distribution<> dis(0, 9);
 
-		for(int i = 0; i < x; i++){
-			int a = dis(gen);
-			int b = dis(gen);
+		int n = (int)data.size();
+		for (int i = 0; i < x; i++) {
+			int a = dis(gen) % n; // zabezpieczenie przed wyjściem poza zakres
+			int b = dis(gen) % n; // j.w.
 			data[a][b] = dis(gen);
 		}
 		return *this;
@@ -259,5 +264,232 @@ public:
 			}
 		}
 		return *this;
+	}
+
+	//..................................................................
+
+	// wstaw(int x, int y, int wartosc)
+	Matrix& wstaw(int x, int y, int wartosc) {
+		data[x][y] = wartosc;
+		return *this;
+	}
+
+	// szachownica()
+	Matrix& szachownica(void) {
+		for (int i = 0; i < (int)data.size(); i++) {
+			for (int j = 0; j < (int)data.size(); j++) {
+				data[i][j] = ((i + j) % 2 == 0) ? 0 : 1;
+			}
+		}
+		return *this;
+	}
+
+	// operator+(matrix& m) // A = A + m
+	Matrix& operator+(Matrix const& m) {
+		// Sprawdzenie wymiarów
+		if (data.size() != m.data.size()) {
+			// Nie zmieniamy nic jeśli wymiary nie pasują
+			return *this;
+		}
+
+		for (int i = 0; i < (int)data.size(); i++) {
+			for (int j = 0; j < (int)data.size(); j++) {
+				data[i][j] += m.data[i][j];
+			}
+		}
+		return *this;
+	}
+
+	// operator*(matrix& m) // A = A * m
+	Matrix& operator*(Matrix const& m) {
+		// Sprawdzenie czy można mnożyć: (n x n) * (n x n) -> OK jeżeli rozmiary są takie same
+		int n = (int)data.size();
+		if (n == 0 || n != (int)m.data.size()) {
+			// Nie zmieniamy nic jeśli nie da się mnożyć
+			return *this;
+		}
+
+		Matrix<T> result(n);
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++) {
+				T sum = 0;
+				for (int k = 0; k < n; k++) {
+					sum += data[i][k] * m.data[k][j];
+				}
+				result.data[i][j] = sum;
+			}
+		}
+		*this = result;
+		return *this;
+	}
+
+	// operator+(int a) // A = A + a
+	Matrix& operator+(int a) {
+		for (auto& row : data) {
+			for (auto& elem : row) {
+				elem += a;
+			}
+		}
+		return *this;
+	}
+
+	// operator*(int a) // A = A * a
+	Matrix& operator*(int a) {
+		for (auto& row : data) {
+			for (auto& elem : row) {
+				elem *= a;
+			}
+		}
+		return *this;
+	}
+
+	// operator-(int a) // A = A - a
+	Matrix& operator-(int a) {
+		for (auto& row : data) {
+			for (auto& elem : row) {
+				elem -= a;
+			}
+		}
+		return *this;
+	}
+
+	// friend matrix operator+(int a, matrix& m)
+	friend Matrix operator+(int a, Matrix const& m) {
+		Matrix result(m);
+		for (auto& row : result.data) {
+			for (auto& elem : row) {
+				elem = a + elem;
+			}
+		}
+		return result;
+	}
+
+	// friend matrix operator*(int a, matrix& m)
+	friend Matrix operator*(int a, Matrix const& m) {
+		Matrix result(m);
+		for (auto& row : result.data) {
+			for (auto& elem : row) {
+				elem = a * elem;
+			}
+		}
+		return result;
+	}
+
+	// friend matrix operator-(int a, matrix& m)
+	friend Matrix operator-(int a, Matrix const& m) {
+		Matrix result(m);
+		for (auto& row : result.data) {
+			for (auto& elem : row) {
+				elem = a - elem;
+			}
+		}
+		return result;
+	}
+
+	// operator++(int) // A++ zwiększa wszystkie elementy o 1
+	Matrix& operator++(int) {
+		for (auto& row : data) {
+			for (auto& elem : row) {
+				elem += 1;
+			}
+		}
+		return *this;
+	}
+
+	// operator--(int) // A-- zmniejsza wszystkie elementy o 1
+	Matrix& operator--(int) {
+		for (auto& row : data) {
+			for (auto& elem : row) {
+				elem -= 1;
+			}
+		}
+		return *this;
+	}
+
+	// operator+=(int a) // każdy element powiększamy o a
+	Matrix& operator+=(int a) {
+		for (auto& row : data) {
+			for (auto& elem : row) {
+				elem += a;
+			}
+		}
+		return *this;
+	}
+
+	// operator-=(int a)
+	Matrix& operator-=(int a) {
+		for (auto& row : data) {
+			for (auto& elem : row) {
+				elem -= a;
+			}
+		}
+		return *this;
+	}
+
+	// operator*=(int a)
+	Matrix& operator*=(int a) {
+		for (auto& row : data) {
+			for (auto& elem : row) {
+				elem *= a;
+			}
+		}
+		return *this;
+	}
+
+	// operator()(double a) - interpretacja zadania operator(double)
+	// "wszystkie cyfry są powiększone o część całkowitą z wpisanej cyfry"
+	// Zakładamy więc, że floor(a) dodajemy do każdego elementu.
+	Matrix& operator()(double a) {
+		int val = (int)std::floor(a);
+		for (auto& row : data) {
+			for (auto& elem : row) {
+				elem += val;
+			}
+		}
+		return *this;
+	}
+
+	// operator<<
+	friend std::ostream& operator<<(std::ostream& o, Matrix const& m) {
+		for (const auto& row : m.data) {
+			for (const auto& elem : row) {
+				o << elem << " ";
+			}
+			o << "\n";
+		}
+		return o;
+	}
+
+	// operator==
+	bool operator==(const Matrix& m) const {
+		if (data.size() != m.data.size()) return false;
+		for (int i = 0; i < (int)data.size(); i++) {
+			for (int j = 0; j < (int)data.size(); j++) {
+				if (data[i][j] != m.data[i][j]) return false;
+			}
+		}
+		return true;
+	}
+
+	// operator>
+	bool operator>(const Matrix& m) const {
+		if (data.size() != m.data.size()) return false;
+		for (int i = 0; i < (int)data.size(); i++) {
+			for (int j = 0; j < (int)data.size(); j++) {
+				if (!(data[i][j] > m.data[i][j])) return false;
+			}
+		}
+		return true;
+	}
+
+	// operator<
+	bool operator<(const Matrix& m) const {
+		if (data.size() != m.data.size()) return false;
+		for (int i = 0; i < (int)data.size(); i++) {
+			for (int j = 0; j < (int)data.size(); j++) {
+				if (!(data[i][j] < m.data[i][j])) return false;
+			}
+		}
+		return true;
 	}
 };
