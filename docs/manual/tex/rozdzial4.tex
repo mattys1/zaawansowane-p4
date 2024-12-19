@@ -387,3 +387,23 @@ Metody zostaną opisane poniżej.
 Jest odpowiedzialna za wyświetlanie elementów macierzy w konsoli. Pętla zewnętrzna jest odpowiedzialna za przechodzenie przez wiersze macierzy a wewnętrzna przez elementy wiersza.
 
 \texttt{metoda alokuj}
+Jest odpowiedzialna za alokowanie pamięci dla macierzy o rozmiarze n*n.
+Jeżeli macierz jest pusta to tworzy nową macierz, jeżeli jest mniejsza od n to zmienia jej rozmiar na n*n.
+
+\texttt{Metoda pokaz}
+Zwraca wartość elementu na pozycji x,y w macierzy.
+
+\texttt{Metoda dowroc}
+Jest odpowiedzialna za zamianę wierszy z kolumnami. Tworzy tymczasową macierz \texttt{temp} aby wypełnić ją wartościami tansponowanymi względem macierzy wejściowej. Następnie zastępuje bieżącą macierz nowymi wartościami.
+
+\texttt{Metoda losuj}
+Tworzy generator liczb pseudolosowych od 0 do 9 a nastepnie przy pomocy pętli for wypełnia całą macierz losowymi wartościami z zakresu.
+
+\texttt{Metoda losuj x elementów}
+Zasada działania jest podobna do poprzedniej metody losuj z zakresu ale tutaj losujemy x elementów.
+
+\texttt{Metoda szachownica}
+Tworzy wzór szachownicy, gxzie pola mają wartość albo 0 albo 1, dzieje się to przy pomocy warunku (i+j) modulo 2 == 0.
+
+\texttt{Metoda porównania}
+Sprawdza czy wszystkie elementy obu macierzy są równe.
