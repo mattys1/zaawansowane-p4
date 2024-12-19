@@ -462,9 +462,9 @@ public:
 
 	// operator==
 	bool operator==(const Matrix& m) const {
-		if (data.size() != m.data.size()) return false;
+		if (data.size() != m.data.size() || data[0].size() != m.data[0].size()) return false;
 		for (int i = 0; i < (int)data.size(); i++) {
-			for (int j = 0; j < (int)data.size(); j++) {
+			for (int j = 0; j < (int)data[i].size(); j++) {
 				if (data[i][j] != m.data[i][j]) return false;
 			}
 		}
@@ -473,9 +473,9 @@ public:
 
 	// operator>
 	bool operator>(const Matrix& m) const {
-		if (data.size() != m.data.size()) return false;
+		if (data.size() != m.data.size() || data[0].size() != m.data[0].size()) return false;
 		for (int i = 0; i < (int)data.size(); i++) {
-			for (int j = 0; j < (int)data.size(); j++) {
+			for (int j = 0; j < (int)data[i].size(); j++) {
 				if (!(data[i][j] > m.data[i][j])) return false;
 			}
 		}
@@ -484,9 +484,9 @@ public:
 
 	// operator<
 	bool operator<(const Matrix& m) const {
-		if (data.size() != m.data.size()) return false;
+		if (data.size() != m.data.size() || data[0].size() != m.data[0].size()) return false;
 		for (int i = 0; i < (int)data.size(); i++) {
-			for (int j = 0; j < (int)data.size(); j++) {
+			for (int j = 0; j < (int)data[i].size(); j++) {
 				if (!(data[i][j] < m.data[i][j])) return false;
 			}
 		}
