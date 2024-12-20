@@ -384,27 +384,125 @@ Klasa posiada tyko jedno prywatne pole, którym jest \texttt{std::vector<std::ve
 Metody zostaną opisane poniżej.
 
 \begin{itemize}
+	\item \texttt{Konstruktor domyślny}\\
+	Domyślny konstruktor, nie wykonuje żadnych działań poza utworzeniem obiektu.
+	
+	\item \texttt{Konstruktor z rozmiarem}\\
+	Znajduje się w wierszu 10. Jest odpowiedzialny za utworzenie macierzy n*n wypełnionej wartościami domyślnymi T data() alokuje pamięć dla wektora o długości n, gdzie każdy element to wektor o długości n.
+	
+	\item \texttt{Konstruktor z tablicą}\\
+	Znajduje się w wierszach od 12 do 17. Jest odpowiedzialny za tworzenie macierzy o n*n wypełnionej wartościami t. Instrukcja row kopiuje n elementów z tablicy t do bieżącego wiersza row. Instrukcja t+=n przesuwa wskaźnik do następnego zestawu elementów.
+	
+	\item \texttt{Konstruktor kopiujący}\\
+	Znajduje się w wierszu 19. Jest odpowiedzialny za tworzenie kopii macierzy n poprzez skopiowanie jej danych.
+	
     \item \texttt{wypisz()}\\
+    Znajduje się w wierszach od 21 do 28.
     Jest odpowiedzialna za wyświetlanie elementów macierzy w konsoli. Pętla zewnętrzna jest odpowiedzialna za przechodzenie przez wiersze macierzy a wewnętrzna przez elementy wiersza.
 
     \item \texttt{alokuj()}\\
+    Znajduje się w wierszach od 30 do 39.
     Jest odpowiedzialna za alokowanie pamięci dla macierzy o rozmiarze n*n. Jeżeli macierz jest pusta to tworzy nową macierz, jeżeli jest mniejsza od n to zmienia jej rozmiar na n*n.
 
     \item \texttt{pokaz()}\\
+    Znajduje się w wierszach od 41 do 43.
     Zwraca wartość elementu na pozycji x,y w macierzy.
 
     \item \texttt{dowroc()}\\
+    Znajduje się w wierszach od 45 do 56.
     Jest odpowiedzialna za zamianę wierszy z kolumnami. Tworzy tymczasową macierz \texttt{temp} aby wypełnić ją wartościami transponowanymi względem macierzy wejściowej. Następnie zastępuje bieżącą macierz nowymi wartościami.
 
     \item \texttt{losuj()}\\
+    Znajduje się w wierszach od 58 do 69.
     Tworzy generator liczb pseudolosowych od 0 do 9 a następnie przy pomocy pętli for wypełnia całą macierz losowymi wartościami z zakresu.
 
     \item \texttt{losuj\_x\_elementów()}\\
+    Znajduje się w wierszach od 71 do 85.
     Zasada działania jest podobna do poprzedniej metody losuj z zakresu ale tutaj losujemy x elementów.
 
-    \item \texttt{szachownica()}\\
+    \item \texttt{diagonalna()}\\
+    Znajduje się w wierszach od 87 do 98.
     Tworzy wzór szachownicy, gdzie pola mają wartość albo 0 albo 1, dzieje się to przy pomocy warunku (i+j) modulo 2 == 0.
 
-    \item \texttt{porównania()}\\
-    Sprawdza czy wszystkie elementy obu macierzy są równe.
+    \item \texttt{diagonalna\_k()}\\
+    Znajduje się w wierszach od 100 do 111,
+    Jest odpowiedzialna za ustawienie wartości przekątnej przesuniętej o k miejsc.
+    
+    \item \texttt{kolumna()}\\
+    Znajduje się w wierszach od 113 do 118.
+    Jest odpowiedzialna za wypełnienie kolumny k wartościami z tablicy t.
+    
+    \item \texttt{wiersz()}\\
+    Znajduje się w wierszach od 120 do 125.
+    Jest odpowiedzialna za wypełnienie wiersza x wartościami z tablicy t.
+    
+    \item \texttt{przekatna()}\\
+    Znajduje się w wierszach od 127 do 138.
+    Jest odpowiedzialna za wypełnienie głównej przekątnej 1 a resztę 0.
+    
+    \item \texttt{pod\_przekatna()}\\
+    Znajduje się w wierszach od 140 do 151.
+    Jest odpowiedzialna za wypełnienie obszaru pod główną przekątną 1 a resztę 0.
+    
+    \item \texttt{nad\_przekatna()}\\
+    Znajduje się w wierszach od 153 do 164.
+    Jest odpowiedzialna za wypełnienie obszaru nad główną przekątną 1 a resztę 0.
+    
+    \item \texttt{wstaw()}\\
+    Znajduje się w wierszach od 166 do 169.
+    Jest odpowiedzialna za wstawienie wartości do macierzy na pozycji (x,y).
+    
+    \item \texttt{Szachownica()}\\
+    Znajduje się w wierszach od 171 do 178.Jest odpowiedzialna za utworzenie wzoru szachownicy w macierzy.
+    
+    \item \texttt{Metody firend operator+(Matirx a)}\\
+    Znajduje się w wierszach od 180 do 191. Jest odpowiedzialna za dodawanie macierzy do macierzy element po elemencie.
+    
+    \item \texttt{operator*(Matrix a)}\\
+    Znajduje się w wierszach od 193 do 211.
+    Jest odpowiedzialna za mnożenie macierzy przez inną macierz.
+    
+    \item \texttt{operator+(int a)}\\
+    Znajduje się w wierszach od 213 do 220.
+    Jest odpowiedzialna za dodawanie do każdego elementu macierzy liczby całkowitej.
+    
+    \item \texttt{operaotr*(int a)}\\
+    Znajduje się w wierszach od 222 do 229.
+    Jest odpowiedzialna za mnożenie każdego elementu macierzy przez liczbę całkowitą.
+    
+    \item \texttt{operator-(int a)}\\
+    Znajduje się w wierszach od 231 do 238.
+    Jest odpowiedzialna za odjęcie od każdego elementu macierzy liczby całkowitej.
+    
+    \item \texttt{operator+(int a, const n)}\\
+    Znajduje się w wierszach od 240 do 248.
+    Jest odpowiedzialna za dodawanie liczb całkowitej do każdego elementu macierzy(postać a+n).
+    
+    \item \texttt{operator*(it a, const n)}\\
+    Znajduje się w wierszach od 250 do 258.
+    Jest odpowiedzialna za mnożenie każdego elementu macierzy przez liczbę całkowitą(postać a*n).
+    
+    \item \texttt{operator-(int a, const n	)}
+    Znajduje się w wierszach od 260 do 268.
+    Jest odpowiedzialna za odejmowanie każdego elementu macierzy od liczby a(postać a-n).
+    
+    \item \texttt{operator++}\\
+    Znajduje się w wierszach od 270 do 277.
+    Jest odpowiedzialny za zwiększenie każdego elementu o 1.
+    
+    \item \texttt{operator--}\\
+    Znajduje się w wierszach od 279 do 284.
+    Jest odpowiedzialna za zmniejszenie wartości elementu o 1.
+    
+    \item \texttt{operator +=(int a)}\\
+    Znajduje się w wierszach od 288 do 295.
+    Dodaje liczbę całkowitą do kaźdego elementu macierzy.
+    
+    \item \texttt{operator -=(int a)}\\
+    Znajduje się w wierszach od 297 do 304.
+    Jest odpowiedzialna za odejmowanie od każdego elementu macierzy liczby całkowitej.
+    
+    \item \texttt{operator()(double a)}\\
+    Znajduje się w wierszach od 315 do 323.
+    Jest odpowiedzialna za dodawanie do każdego elementu macierzy cząstki liczby całkowitej
 \end{itemize}
