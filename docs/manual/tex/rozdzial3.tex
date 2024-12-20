@@ -5,10 +5,10 @@
 %Narysować graf, UML, diagram klas, schemat działania algorytmu
 %Jeśli zadanie zakłada przedstawienie jakiegoś narzędzia (np. git, AI) należy opisać sposób jego używania
 
-\subsection{Implementacja Merge Sort}
+\subsection{Implementacja macierzy}
 
 
-Do zaimplementowania Merge Sorta zostanie użyty Język \texttt{C++} z kompilatorem \texttt{g++}. Wersja standardu \texttt{C++} to \texttt{C++20}. Jako, że projekt ma być rozdzielony na dwa pliki, zostanie zastosowany \texttt{CMake} w celu automatyzacji procesu budowania. \texttt{CMake} pozwala na generowanie plików budujących dany projekt, zgodnie z określoną konfiguracją. Oszczędza to programiście, szczególnie przy większych projektach, manualne pisanie Makefileów.
+Do zaimplementowania Macierzy zostanie użyty Język \texttt{C++} z kompilatorem \texttt{g++} oraz \texttt{MSVC}. Wersja standardu \texttt{C++} to \texttt{C++23}. Jako, że projekt ma być rozdzielony na dwa pliki, zostanie zastosowany \texttt{CMake} w celu automatyzacji procesu budowania. \texttt{CMake} pozwala na generowanie plików budujących dany projekt, zgodnie z określoną konfiguracją. Oszczędza to programiście, szczególnie przy większych projektach, manualne pisanie Makefileów.
 Plik konfiguracyjny \texttt{CMakeLists.txt} może wyglądać jak na rysunku
 
 \begin{lstlisting}[caption=Plik konfiguracyjny CMake, label={lst:cmakelists}, language=C++]
@@ -18,7 +18,7 @@ Plik konfiguracyjny \texttt{CMakeLists.txt} może wyglądać jak na rysunku
 	
 	project(${PROJECT_NAME} VERSION 0.1 LANGUAGES CXX)
 	
-	set(CMAKE_CXX_STANDARD 20)
+	set(CMAKE_CXX_STANDARD 23)
 	set(CMAKE_CXX_STANDARD_REQUIRED ON)
 	set(CMAKE_EXPORT_COMPILE_COMMANDS True)
 	set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/out)
@@ -27,7 +27,7 @@ Plik konfiguracyjny \texttt{CMakeLists.txt} może wyglądać jak na rysunku
 	
 \end{lstlisting}
 
-Edytorem będzie program Neovim. Jest to terminalowy edytor tekstu z możliwością poszerzenia funkcjonalności przy użyciu wszelkiego rodzaju pluginów. Wybrany został, dlatego że jest on już skonfigurowany na moim komputerze zgodnie z moimi preferencjami.
+Edytorem będzie program Neovim oraz Visual Studio 2022 Community Edition. Jest to terminalowy edytor tekstu z możliwością poszerzenia funkcjonalności przy użyciu wszelkiego rodzaju pluginów. Wybrany został, dlatego że jest on już skonfigurowany na moim komputerze zgodnie z moimi preferencjami. Visual Studio jest zintegrowanym środowiskiem deweloperskim stworzonym i rozwijanym przez firmę Microsoft.
 
 \subsection{Git}
 
@@ -44,36 +44,31 @@ Konfiguracja dla Doxygena jest wygenerowana przy użyciu programu doxywizard, po
 	\label{fig:doxywizard}
 \end{figure}
 
-\subsection{Google Test}
+\subsection{Github Copilot}
+Do napisania programu do pomocy został wykorzystany Github Copilot. Z pomocy kopilota można skorzystać na 3 sposoby. Sposób pierwszy - poprzez podpowiedzi generowane przez copilota które są oznaczone kolorem szarym, co pokazano na rysunku nr \ref{fig:copilotsuggestion}.
 
-Google Test został dodany do projektu jako biblioteka w \texttt{CMake}, co zostało ukazane na listingu nr.~\ref{lst:gtestcmake}. Framework jest automatycznie pobierany i instalowany przy konfiguracji.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{images/CopilotSuggestion}
+	\caption{\centering{Sugerowanie przez copilot}}
+	\label{fig:copilotsuggestion}
+\end{figure}
 
-\begin{lstlisting}[caption=Dodanie Google Test do projektu, label={lst:gtestcmake}, language=C++]
-include(FetchContent)
-	FetchContent_Declare(
-			googletest
-			URL https://github.com/google/googletest/archive03597a01ee50ed33e9dfd640b249b4be3799d395.zip
-	)
-FetchContent_MakeAvailable(googletest)
+Sposób drugi to standardowe okienko chat gdzie można zapytać go o rzeczy związane z kodem, przedstawione zostało na rysunku nr \ref{fig:copilotchat}
 
-\end{lstlisting}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{images/CopilotChat}
+	\caption{\centering{okienko chat Copilot}}
+	\label{fig:copilotchat}
+\end{figure}
 
-Pliki źródłowe testów znajdują się we własnym folderze, więc też trzeba do niego dodać \texttt{CMakeLists}, jak widać na listingu nr.~\ref{lst:testscmake}
+Trzeci sposób to wykorzystanie komentarzy jako poleceń co ma zrobić copilot, jak pokazano na rysunku nr \ref{fig:copilotcomments}
 
-\begin{lstlisting}[caption=Dodanie Google Test do projektu, label={lst:testscmake}, language=C++]
-file(GLOB_RECURSE SRC_FILES *.cpp *.h)
-set(TESTS_EXECUTABLE ${PROJECT_NAME}_tests)
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{images/CopilotComments}
+	\caption{\centering{Zastosowanie komentarzy do generowania kodu}}
+	\label{fig:copilotcomments}
+\end{figure}
 
-enable_testing()
-
-add_executable(${TESTS_EXECUTABLE} ${SRC_FILES})
-
-target_link_libraries(
-	${TESTS_EXECUTABLE} PUBLIC
-	${PROJECT_NAME}_lib
-	GTest::gtest_main
-)
-
-\end{lstlisting}
-
-Plik wykonywalny testów jest linkowany do - oprócz samego frameworka - biblioteki jaka jest wygenerowana z klasy \texttt{MergeSorter}, o której więcej w sekcji nr.~\ref{sec:MergeSorter}.
