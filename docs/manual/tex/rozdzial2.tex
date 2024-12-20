@@ -5,20 +5,25 @@
 %Napisać spsoób wykorzystania algorytmu po przez wykonanie przykładu (np. mnożenie macierzy - wykonać ręcznie przykład z mnożeniem macierzy pokazujący jak mnoży się macierz ręcznie)
 %Jeśli zadanie zakłada przedstawienie jakiegoś narzędzia (np. git, AI) należy opisać narzędzie
 
-\subsection{Algorytm Merge Sort}
+\subsection{Macierz}
 
-Algorytm Merge Sort\cite{mergewiki} (Sortowanie przez Scalanie), jest algorytmem sortowania typu dziel i zwyciężaj\cite{divideandconquerwiki} o złożoności obliczeniowej najgorszego i średniego przypadku $ O(n \log{n}) $. Złożoność pamięciowa algorytmu wynosi natomiast $ O(n) $.
-
-Algorytm polega na początkowym podzieleniu tablicy na jednoelementowe części. Następnie, części te są ze sobą stopniowo scalane. Przy scalaniu element jednej podtablicy porównywany jest z drugą. Mniejszy wynik porównania trafia do następnego "poziomu" scalonej tablicy, a algorytm przechodzi do porównywania następnego elementu danej podtablicy.
-
-Graficzna reprezentacja algorytmu jest zaprezentowana na rysunku \ref{fig:mergesort}
+Macierz\cite{matrixwiki} jest dwu wymiarową tablicą elementów, reprezentującą odpowiednio ułożony zbiór wartości. Macierze często używane są w matematyce, fizyce i oczywiście informatyce, ze względu na fakt, że można na nich wykonywać różne operacje matematyczne. 
 
 \begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{images/mergesort.drawio.png}
-	\caption{Reprezentacja sortowania Merge Sort}
-	\label{fig:mergesort}
+	\begin{center}
+		\[
+		\begin{bmatrix}
+		1 & 2 & 3 \\
+		4 & 5 & 6 \\
+		7 & 8 & 9
+		\end{bmatrix}
+		\]
+	\end{center}
+	\caption{Przykładowa macierz}
+	\label{fig:matrix_example}
 \end{figure}
+
+Na rys. \ref{fig:matrix_example} jest pokazana przykładowa macierz.
 
 \subsection{Git}
 Kolejnym konceptem, którym zajmuje się projekt jest narzędzie git\cite{gitsite}. Pozwala ono zarządzać poszczególnymi wersjami projektów. Głównym korzeniem gita jest system commitów, czyli zapisania zmian w pliku w stosunku do commita starszego. To, w połączeniu z jego innymi możliwościami pozwala na tworzenie długich i skomplikowanych osi czasu danych projektów. 
@@ -82,5 +87,15 @@ Jak widać na rys. \ref{fig:git_checkout}, komenda \texttt{git checkout}, pozwal
 \subsection{Doxygen}
 Doxygen\cite{doxygensite} jest narzędziem automatycznie generującym dokumentację programu z komentarzy w kodzie źródłowym. Potrafi on generować strony HTML, gdzie można dynamicznie nawigować się miedzy rożnymi częściami kodu oraz pliki \LaTeX, które można konwertować na różne, statyczne formaty.
 
-\subsection{Google Test}
-Google Test \cite{gtestrepo} jest frameworkiem stworzonym przez Google służącym do prowadzenia Unit Testów w języku \texttt{C++}. Narzędzie to pozwala na gwarantowanie poprawności logiki kodu.
+\subsection{Github Copilot}
+
+GitHub Copilot\cite{copilotsite} to model \texttt{LLM} oferowany przez GitHub - może on analizować kod źródłowy i funkcjonować jako zaawansowany autocompleter lub asystent potrafiący tworzyć proste fragmenty. Jest on bezpośrednio zintegrowany z wieloma narzędziami Microsoftu, takimi jak Visual Studio Code czy zwykłe Visual Studio. Jednak, jest on dostępny również jako rozszerzenie do innych edytorów, jak Neovim, którego instalacja przy użyciu menagera pluginów \texttt{Lazygit} jest ukazana na rys. \ref{fig:copilot_install}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{images/copilot-plugin.png}
+	\caption{\centering{Plik instalacyjny Plugina Copilot}}
+	\label{fig:copilot_install}
+\end{figure}
+
+W Visual Studio jest on zainstalowany domyślnie.
