@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.12.13)  13 DEC 2024 12:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.12.13)  20 DEC 2024 12:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -858,13 +858,12 @@ LaTeX Font Info:    Trying to load font information for T1+pcr on input line 23
 (/usr/share/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 6.29996pt on input line 230.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 6.29996pt on input line 230.
- [1] [2
-
-]
+ [1]
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 6.29996pt on input line 230.
+ [2]
 Package hyperref Info: Option `pageanchor' set `true' on input line 233.
 
 Chapter 1.
@@ -878,6 +877,7 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 12.9599pt on input line 1.
 ) [1
+
 
 ] [2
 
@@ -907,125 +907,226 @@ LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 6.29996pt on input line 44.
  [5]
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 51.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 7.19995pt on input line 66.
-LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 69.
+(Font)              scaled to size 10.79993pt on input line 94.
 
 [6]
-Underfull \hbox (badness 10000) detected at line 144
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 7.19995pt on input line 109.
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 112.
+ [7]
+Underfull \hbox (badness 10000) detected at line 187
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 163
-[][][]
- []
-
-[7]
-Underfull \hbox (badness 10000) detected at line 184
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 198
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 219
+Underfull \hbox (badness 10000) detected at line 206
 [][][]
  []
 
 [8]
-Underfull \hbox (badness 10000) detected at line 238
+Underfull \hbox (badness 10000) detected at line 227
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 252
+Underfull \hbox (badness 10000) detected at line 241
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 266
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 280
+Underfull \hbox (badness 10000) detected at line 262
 [][][]
  []
 
 [9]
-Underfull \hbox (badness 10000) detected at line 301
+Underfull \hbox (badness 10000) detected at line 281
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 315
+Underfull \hbox (badness 10000) detected at line 295
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 336
+Underfull \hbox (badness 10000) detected at line 309
 [][][]
  []
 
-) [10]
+
+Underfull \hbox (badness 10000) detected at line 328
+[][][]
+ []
+
+[10]
+Underfull \hbox (badness 10000) detected at line 347
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 366
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 385
+[][][]
+ []
+
+[11]
+Underfull \hbox (badness 10000) detected at line 404
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 423
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 437
+[][][]
+ []
+
+[12]
+Underfull \hbox (badness 10000) detected at line 456
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 475
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 489
+[][][]
+ []
+
+[13]
+Underfull \hbox (badness 10000) detected at line 508
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 527
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 546
+[][][]
+ []
+
+[14]
+Underfull \hbox (badness 10000) detected at line 565
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 579
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 600
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 614
+[][][]
+ []
+
+[15]
+Underfull \hbox (badness 10000) detected at line 628
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 649
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 672
+[][][]
+ []
+
+[16]
+Underfull \hbox (badness 10000) detected at line 707
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 728
+[][][]
+ []
+
+[17]
+Underfull \hbox (badness 10000) detected at line 749
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 770
+[][][]
+ []
+
+) [18]
 Chapter 4.
 (./main_8cpp.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
-
- []
-
-) (./Matrix_8hpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
  []
 
-) (./Matrix_8hpp_source.tex [11
+) (./Matrix_8hpp.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--8
 
-] [12]) [13] [14
+ []
 
-] (./refman.ind
+) (./Matrix_8hpp_source.tex [19
+
+] [20] [21] [22] [23]) [24] (./refman.ind
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 22.39185pt on input line 1.
- [15
+
+[25
 
 
-])
-(./refman.aux)
+
+]) (./refman.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 73BC64053A97E9D4FDF32D5035C773BF;5890.
+(rerunfilecheck)             Checksum: D6F44D747C417931C3C8218412C7C596;9915.
  ) 
 Here is how much of TeX's memory you used:
- 17939 strings out of 476041
- 282951 string characters out of 5792970
- 1943187 words of memory out of 5000000
- 39627 multiletter control sequences out of 15000+600000
- 616056 words of font info for 112 fonts, out of 8000000 for 9000
+ 18080 strings out of 476041
+ 286232 string characters out of 5792970
+ 1948187 words of memory out of 5000000
+ 39694 multiletter control sequences out of 15000+600000
+ 617820 words of font info for 119 fonts, out of 8000000 for 9000
  34 hyphenation exceptions out of 8191
- 101i,15n,117p,432b,744s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,16n,117p,442b,744s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy8.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/
-texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type
-1/urw/courier/ucrro8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8
-a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/t
-exmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/type
-1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (19 pages, 139236 bytes).
+msy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/
+share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dis
+t/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/cou
+rier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></us
+r/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/f
+onts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texmf-dist/fonts/type1/urw/helv
+etic/uhvr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on refman.pdf (29 pages, 186472 bytes).
 PDF statistics:
- 510 PDF objects out of 1000 (max. 8388607)
- 460 compressed objects within 5 object streams
- 87 named destinations out of 1000 (max. 500000)
- 265 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 894 PDF objects out of 1000 (max. 8388607)
+ 826 compressed objects within 9 object streams
+ 156 named destinations out of 1000 (max. 500000)
+ 433 words of extra memory for PDF output out of 10000 (max. 10000000)
 
